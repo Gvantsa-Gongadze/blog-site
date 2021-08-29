@@ -1,0 +1,28 @@
+table {
+    width: 100%;
+    border: #E27D60 solid 2px;
+    border-radius: 5px;
+    padding: 20px;
+
+    tr {
+        height: 45px;
+
+        th {
+            cursor: pointer;
+            text-align: left;
+            border-bottom: #E27D60 solid 1px;
+            padding: 15px;
+        }
+        td {
+            padding: 10px;
+        }
+    }
+    .see-more-button {
+        cursor: pointer;
+        text-transform: capitalize;
+        border: #E27D60 solid 1px;
+        background-color: transparent;
+        border-radius: 3px;
+        padding: 5px 10px;
+    }
+}

@@ -1,0 +1,27 @@
+<table>
+    <tbody>
+        <tr>
+            <th (click)="sortTable('name')">name</th>
+            <th (click)="sortTable('username')">username</th>
+            <th (click)="sortTable('email')">email</th>
+            <th (click)="sortTable('phone')">phone</th>
+            <th (click)="sortTable('company', 'name')">company name</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let user of userList">
+            <td>{{user.name}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.company.name}}</td>
+            <td>
+                <button 
+                class="see-more-button"
+                    [routerLink]="['/user/', user.id]" 
+                >
+                    see posts
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
