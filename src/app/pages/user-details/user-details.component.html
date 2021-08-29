@@ -1,0 +1,13 @@
+<div class="user-posts">
+    <div class="name">
+        {{user.name}}'s Posts:
+    </div>
+    <div class="post-list">
+        <ng-container *ngFor="let post of userPostList">
+            <div [routerLink]="['/post/', post.id]" class="post-card">
+                <div>{{post.title}}</div>
+                <div>{{post.body}}</div>
+            </div>
+        </ng-container>
+    </div>
+</div>

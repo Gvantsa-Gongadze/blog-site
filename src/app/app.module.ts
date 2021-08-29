@@ -7,12 +7,14 @@ import { UserMenuComponent } from './pages/user-menu/user-menu.component';
 import { PostListComponent } from './pages/post-list/post-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserMenuComponent,
-    PostListComponent
+    PostListComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
