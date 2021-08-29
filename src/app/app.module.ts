@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { HeaderComponent } from './components/header/header.component';
+import { PostDetailsComponent } from './pages/post-details/post-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeaderComponent } from './components/header/header.component';
     UserMenuComponent,
     PostListComponent,
     UserDetailsComponent,
-    HeaderComponent
+    HeaderComponent,
+    PostDetailsComponent
   ],
   imports: [
     BrowserModule,

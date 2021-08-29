@@ -34,4 +34,7 @@ export class ApiService {
   deletePost(id: number): Observable<{}>{
     return this.httpClient.delete(`https://jsonplaceholder.typicode.com/posts/${id}`) as Observable<{}>;
   }
+  getPostComments(id: number): Observable<Comment[]> {
+    return this.httpClient.get(`https://jsonplaceholder.typicode.com/comments?postId=${id}`) as Observable<Comment[]>;
+  }
 }

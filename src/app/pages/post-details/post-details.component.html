@@ -1,0 +1,56 @@
+<ng-container *ngIf="!noDataFound">
+    <div class="post-and-comments">
+        <div class="name">{{user.name}}'s post</div>
+        <ng-container *ngIf="!editMode">
+            <div class="post-info">
+                <div>{{post.title}}</div>
+                <div>{{post.body}}</div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="editMode">
+            <form class="edit-form">
+                <div class="form-group">
+                    <label for="title" class="lable">Write Title</label>
+                    <input type="username" id="title" name="title" class="form-control" [(ngModel)]="post.title" required autofocus>
+                    <span class="error-message" *ngIf="!post.title">
+                        This field is required.
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="body" class="lable">Write post</label>
+                    <textarea name="body" id="body" cols="30" rows="10" [(ngModel)]="post.body" class="form-control" required></textarea>
+                    <span class="error-message" *ngIf="!post.body">
+                        This field is required.
+                    </span>
+                </div>
+                <div class="buttons">
+                    <button class="cancel-button" (click)="onCancelEditedPost()">cancel</button>
+                    <button class="save-button" [disabled]="!post.title || !post.body" (click)="onSaveEditedPost()">save</button>
+                </div>
+            </form>
+        </ng-container>
+        <div class="buttons">
+            <button class="delete-button" (click)="onDeletePost()">delete</button>
+            <button class="edit-button" (click)="onEditPost()">edit</button>
+        </div>
+        <hr>
+        <div class="comments">
+            <div class="comments-lable">commnets:</div>
+            <ng-container *ngFor="let comment of commentList; let i = index">
+                <div class="comment">
+                    <span> <strong> Comment By: </strong> {{comment.email}}</span>
+                    <span> <strong> Comment Name: </strong> {{comment.name}}</span>
+                    <span> <strong> Comment: </strong>{{comment.body}}</span>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="noDataFound">
+    <div class="no-data">
+        <span>
+            No post was found! Please, go back to the "Post List" page!
+        </span>
+        <button class="go-back-button" [routerLink]="['/posts']">go back</button>
+    </div>
+</ng-container>
