@@ -4,12 +4,14 @@ import { PostDetailsComponent } from './pages/post-details/post-details.componen
 import { PostListComponent } from './pages/post-list/post-list.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { UserMenuComponent } from './pages/user-menu/user-menu.component';
+import { PostNewComponent } from './post-new/post-new.component';
 
 const routes: Routes = [
   { path: 'users', component: UserMenuComponent },
   { path: 'user/:id', component: UserDetailsComponent },
   { path: 'posts', component: PostListComponent },
   { path: 'post/:id', component: PostDetailsComponent },
+  { path: 'posts/new', component: PostNewComponent },
 ];
 
 @NgModule({
