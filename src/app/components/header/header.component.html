@@ -1,0 +1,14 @@
+<div class="header">
+    <div 
+        (click)="isActive = 'USER'" 
+        [class.active]="isActive === 'USER'" 
+        [routerLink]="['/users']" 
+        class="header-item"
+    >User list</div>
+    <div 
+        (click)="isActive = 'POST'"  
+        [class.active]="isActive === 'POST'" 
+        [routerLink]="['/posts']" 
+        class="header-item"
+    >Post list</div>
+</div>

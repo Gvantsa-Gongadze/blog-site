@@ -8,13 +8,15 @@ import { PostListComponent } from './pages/post-list/post-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserMenuComponent,
     PostListComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
