@@ -1,0 +1,18 @@
+<div class="post-list-container">
+    <div class="add-new">
+        <button class="add-new-button" [routerLink]="['/posts/new']"> + add new post</button>
+    </div>
+    <div class="post-list">
+        <ng-container *ngFor="let post of currantPost">
+            <div [routerLink]="['/post/', post.id]" class="post-card">
+                <div>{{post.title}}</div>
+                <div>{{post.body}}</div>
+            </div>
+        </ng-container>
+    </div>
+    <div class="pagination">
+        <button class="pagination-button" [disabled]="!currentPage" (click)="prev()">prev</button>
+        <span>{{currentPage + 1}}/ {{totalPages}}</span>
+        <button class="pagination-button" [disabled]="currentPage > (totalPages - 2)" (click)="next()">next</button>
+    </div>
+</div>

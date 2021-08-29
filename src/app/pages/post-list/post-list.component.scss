@@ -1,0 +1,65 @@
+.post-list-container {
+    .post-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        .post-card {
+            cursor: pointer;
+            width: 200px;
+            height: 300px;
+            padding: 20px;
+            text-transform: capitalize;
+            border: 2px solid #E27D60;
+            border-radius: 5px;
+            margin: 20px;
+            transition: all .3s;
+
+            div {
+                &:first-child {
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                }
+            }
+            &:hover {
+                background-color: #E27D60;
+            }
+        }
+    }
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+
+        .pagination-button {
+            cursor: pointer;
+            border: 1px solid;
+            border-radius: 3px;
+            background-color: transparent;
+            margin: 20px;
+            padding: 5px 10px;
+            transition: all .3s;
+        }
+    }
+    .add-new {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+
+        .add-new-button {
+            cursor: pointer;
+            border: 2px solid #E27D60;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-size: 20px;
+            background-color: transparent;
+            transition: all .3s;
+
+            &:hover {
+                background-color: #E27D60;
+            }
+        }
+    }
+}
