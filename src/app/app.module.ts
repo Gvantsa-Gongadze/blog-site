@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PostDetailsComponent } from './pages/post-details/post-details.component';
+import { PostNewComponent } from './post-new/post-new.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PostDetailsComponent } from './pages/post-details/post-details.componen
     PostListComponent,
     UserDetailsComponent,
     HeaderComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    PostNewComponent
   ],
   imports: [
     BrowserModule,

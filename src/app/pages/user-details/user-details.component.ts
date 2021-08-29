@@ -45,7 +45,6 @@ export class UserDetailsComponent implements OnInit, OnDestroy {
   getUserPosts(): void {
     if (this.postList.length > 0) {
       this.userPostList = this.postList.filter((post: Post) => post.userId === this.id);
-      console.log(this.userPostList);
     }
   }
   getPostList(): void {
